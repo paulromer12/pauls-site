@@ -1,0 +1,78 @@
+/* src/pages/Projects.css */
+
+/* Ensure the projects container uses the full height if needed, and applies global text color */
+.projects-container {
+  color: var(--fg); /* Use global foreground color from index.css */
+  padding-block: 1rem 3rem; /* Add some padding top and bottom */
+}
+
+.projects-main-title {
+  font-size: 2.5rem; /* Larger than default h2 */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--fg); /* Ensure it uses the foreground color */
+}
+
+.projects-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Space between columns and rows of columns */
+}
+
+.projects-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between title and cards, and between cards */
+}
+
+.projects-section-title {
+  font-size: 1.75rem; /* Prominent section titles */
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 0.5rem; /* Space below the section title */
+}
+
+/* NEW: Styling for the <a> tag that will wrap the project card */
+.project-card-link {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit text color from parent */
+  display: block; /* Ensure the link takes up the article's block space */
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smooth transition for hover */
+  border-radius: 8px; /* Apply border-radius here if the <a> is the outer element with shadow */
+}
+
+.project-card-link:hover {
+  transform: translateY(-5px) scale(1.02); /* Move card up slightly and scale */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.project-card-link:hover .project-card {
+ /* If project-card has its own shadow, you might want to adjust it or the link's shadow */
+ /* For simplicity, the main hover shadow is on project-card-link */
+}
+
+.project-card {
+  background-color: #1a2634; /* Darker card background */
+  padding: 1.5rem;
+  border-radius: 8px; /* Rounded corners (can be on link if it's the direct parent of content) */
+  /* Original box-shadow is now less prominent or handled by the link hover for a cleaner effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--fg);
+  height: 100%; /* Ensure cards in a row can be of similar height if content differs slightly */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--fg);
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1; /* Slightly lighter text for paragraph */
+  flex-grow: 1; /* Allows paragraph to take available space, useful for consistent card height */
+}
