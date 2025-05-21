@@ -1,68 +1,81 @@
+/* ---------- CSS RESET (tiny) ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ---------- Global theme ---------- */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --bg: #0f1a29;
+  --fg: #e5e7eb;
+  --accent: #67e8f9;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
+body, #root { min-height: 100vh; background: var(--bg); color: var(--fg); }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* ---------- Layout wrappers ---------- */
+.app { display: flex; flex-direction: column; }
+.container { max-width: 48rem; margin: 0 auto; padding: 0 1rem; }
+.section { margin-block: 3rem; }
+.section h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+.section h3 { font-size: 1.25rem; font-weight: 600; margin: 1.5rem 0 0.25rem; }
+.timeline { border-left: 2px solid #475569; padding-left: 1rem; }
 
-body {
-  margin: 0;
+/* ---------- Navigation ---------- */
+.navbar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.nav‑link { text-decoration: none; color: inherit; transition: color 120ms; }
+.nav‑link:hover { color: var(--accent); }
+
+/* ---------- Image gallery ---------- */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-block: 2rem;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.avatar {
+  width: 16rem;      /* 256 px */
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 6px 14px rgb(0 0 0 / .4);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.avatar:hover {
+  transform: translateY(-6px) rotate(1deg) scale(1.03);
+  box-shadow: 0 12px 22px rgb(0 0 0 / .45);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* ---------- Lists ---------- */
+ul { list-style: disc inside; margin-top: 0.25rem; line-height: 1.4; }
+
+/* ---------- Links ---------- */
+a { color: var(--accent); }
+a:hover { text-decoration: underline; }
+
+/* ---------- résumé layout ---------- */
+.resume h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; }
+.resume h3 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 .5rem; }
+
+.timeline {
+  border-left: 2px solid #475569;
+  padding-left: 1rem;
+  margin-left: .25rem;
+}
+
+.job + .job { margin-top: 2rem; }
+
+.sub { color: #9ca3af; margin-bottom: .25rem; }
+
+.ext‑link a { color: var(--accent); text-decoration: underline; }
+.ext‑link a:hover { opacity: .85; }
+
+.skill‑grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: .5rem;
 }
