@@ -46,11 +46,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
-.project-card-link:hover .project-card {
- /* If project-card has its own shadow, you might want to adjust it or the link's shadow */
- /* For simplicity, the main hover shadow is on project-card-link */
-}
-
 .project-card {
   background-color: #1a2634; /* Darker card background */
   padding: 1.5rem;
