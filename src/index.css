@@ -48,10 +48,12 @@ body, #root { min-height: 100vh; background: var(--bg); color: var(--fg); }
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 6px 14px rgb(0 0 0 / .4);
+  /* Use the custom property for initial rotation and define other transform parts */
+  transform: translateY(0px) rotate(var(--initial-rotation, 0deg)) scale(1);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 .avatar:hover {
-  transform: translateY(-6px) rotate(1deg) scale(1.03);
+  transform: translateY(-6px) rotate(1deg) scale(1.03); /* This will now correctly apply */
   box-shadow: 0 12px 22px rgb(0 0 0 / .45);
 }
 
