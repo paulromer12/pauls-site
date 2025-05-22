@@ -23,11 +23,11 @@ export default function Home() {
           <h3>Education</h3>
           <div className="timeline">
             <p className="degree">
-              Bachelor of Science in Software Development
+              Bachelor of Science in Software Development
             </p>
-            <p>Bellevue University — 2023 · Present</p>
+            <p>Bellevue University — 2023 · Present</p>
             <ul>
-              <li>GPA 3.751</li>
+              <li>GPA 3.751</li>
               <li>
                 Relevant coursework: Python, Java, Database Systems&nbsp;(MySQL),
                 HTML, CSS, JavaScript
@@ -52,14 +52,14 @@ export default function Home() {
 
           <div className="timeline">
             <div className="job">
-              <h4>High Net Worth Service Associate II</h4>
-              <p className="sub">Fidelity Investments — Nov 2022 · Present</p>
+              <h4>High Net Worth Service Associate II</h4>
+              <p className="sub">Fidelity Investments — Nov 2022 · Present</p>
               <ul>
                 <li>
                   Efficient problem resolution and education for
-                  High‑Net‑Worth clients&nbsp;($500 k+)
+                  High Net Worth clients&nbsp;($500k+)
                 </li>
-                <li>Frequent use of 9 + tools to accomplish client goals</li>
+                <li>Frequent use of 9+ tools to accomplish client goals</li>
                 <li>
                   Regularly move large dollar amounts with high accuracy and
                   efficiency
@@ -68,14 +68,14 @@ export default function Home() {
             </div>
 
             <div className="job">
-              <h4>High Net Worth Service Associate</h4>
+              <h4>High Net Worth Service Associate</h4>
               <p className="sub">
-                Fidelity Investments — Oct 2020 · Nov 2022
+                Fidelity Investments — Oct 2020 · Nov 2022
               </p>
               <ul>
                 <li>
                   Efficient problem resolution and education for
-                  High‑Net‑Worth clients
+                  High Net Worth clients
                 </li>
               </ul>
             </div>
@@ -83,12 +83,12 @@ export default function Home() {
             <div className="job">
               <h4>Customer Relationship Associate</h4>
               <p className="sub">
-                Fidelity Investments — Oct 2019 · Oct 2020
+                Fidelity Investments — Oct 2019 · Oct 2020
               </p>
               <ul>
                 <li>
                   Helped clients feel confident, make clear decisions, and get
-                  the most from Fidelity’s tools
+                  the most from Fidelity's tools
                 </li>
               </ul>
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
         {/* skills */}
         <article className="skills">
           <h3>Skills</h3>
-          <div className="skill‑grid">
+          <div className="skill-grid">
             <ul>
               <li>Programming: Java, Python, JavaScript</li>
               <li>Database: MySQL</li>
