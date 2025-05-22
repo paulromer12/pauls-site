@@ -23,7 +23,7 @@ body, #root { min-height: 100vh; background: var(--bg); color: var(--fg); }
   display: flex;
   justify-content: center;
   gap: 3rem;
-  padding: 4rem 0;
+  padding: 3rem 0;
   font-weight: 500;
 }
 .nav-link {
