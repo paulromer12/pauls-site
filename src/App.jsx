@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import Posts from './pages/Posts';
+import MyAwesomeBlogPost from './pages/posts/MyAwesomePost'; // Import the post component
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.hash);
@@ -29,22 +30,28 @@ export default function App() {
   }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
 
   let PageComponent;
-  switch (currentPath) {
-    case '#/about':
-      PageComponent = AboutMe;
-      break;
-    case '#/projects':
-      PageComponent = Projects;
-      break;
-    case '#/posts':
-      PageComponent = Posts;
-      break;
-    case '#/':
-    case '': // Handle empty hash as home
-      PageComponent = Home;
-      break;
-    default:
-      PageComponent = Home; // Default to Home for any unrecognized hash
+  // Check for specific post routes first
+  if (currentPath === '#/posts/my-awesome-blog-post') {
+    PageComponent = MyAwesomeBlogPost;
+  } else {
+    // Handle other main pages
+    switch (currentPath) {
+      case '#/about':
+        PageComponent = AboutMe;
+        break;
+      case '#/projects':
+        PageComponent = Projects;
+        break;
+      case '#/posts':
+        PageComponent = Posts; // This is the list of posts
+        break;
+      case '#/':
+      case '': // Handle empty hash as home
+        PageComponent = Home;
+        break;
+      default:
+        PageComponent = Home; // Default to Home for any unrecognized hash
+    }
   }
 
   return (

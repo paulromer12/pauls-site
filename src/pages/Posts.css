@@ -1,0 +1,61 @@
+.posts-container {
+  color: var(--fg);
+  padding-block: 1rem 3rem;
+}
+
+.posts-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--fg);
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.post-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+}
+
+.post-card-link:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.post-card {
+  background-color: #1a2634;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  min-width: 180px; /* Increase this value for wider cards */
+}
+
+.post-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--fg);
+}
+
+.post-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  flex-grow: 1;
+}
+
+.post-card small {
+  color: #94a3b8;
+}
